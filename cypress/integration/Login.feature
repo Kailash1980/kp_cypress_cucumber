@@ -5,9 +5,9 @@ Feature: Login
   @smoke
   Scenario: Conduit Login
     Given I open Conduit login page
-    When I type in
+    When user type username and password
         |  username  | password  |
-        |  qamilestone.academy@gmail.com | admin123  |
-    And I click on Sign in button
-    Then "Your Feed" should be shown
+      | Garry123 | Test@123 |
+    And user click on sign in button
+    Then "Welcome to The SSAT" should be shown
      
