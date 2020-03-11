@@ -2,9 +2,6 @@
 
 This repository contains code used in Youtube playlist "<B>Cypress.io - End to End Testing Framework</B>" by Kailash Pathak.
 
-Tutorial available here: https://www.youtube.com/playlist?list=PLzDWIPKHyNmK9NX9_ng2IdrkEr8L4WwB0
-
-
 <B>» Pre-requisites to this course include:</B>
   
 - Visual Studio Code: https://code.visualstudio.com/download
