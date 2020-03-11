@@ -1,6 +1,6 @@
 {
-    "baseUrl" : "https://react-redux.realworld.io",
     "reporter": "cypress-multi-reporters",
+     "testFiles": "**/*.feature",
     "reporterOptions": {
         "reporterEnabled": "mochawesome",
         "mochawesomeReporterOptions": {
