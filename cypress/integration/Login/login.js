@@ -1,18 +1,24 @@
-Given('I open Conduit login page', () => {
-    cy.visit('https://portal.ssat.org/Account/LogOn/')
-  });
-  
-  When('user type username and password', (datatable) => {
-    datatable.hashes().forEach(element => {
-        cy.get('#username').type(element.username)
-        cy.get('#password').type(element.password)
-    })
-  })
-  
-  When('user click on sign in button', () => {
-    cy.get('.btn').contains('Sign in').should('be.visible').click()
-  });
-  
-  Then('{string} should be shown', (content) => {
-    cy.contains(content, {timeout:10000}).should('be.visible')
-  });
+/// <reference types ="Cypress"/>
+
+import loginPage from '../pages/loginpage'
+import logincrediential from '../../fixtures/login'
+let login = new loginPage();
+
+Given('I open login page', async () => {
+  await login.enterUrl(logincrediential.url)
+})
+
+When('enter user name and password', async () => {
+  login.enterUserNameAndPassword(logincrediential.username, logincrediential.password);
+})
+
+When('user click on sign in button', async () => {
+  login.clickLoginButton()
+})
+
+Then('verify correct header text display in landing page', async () => {
+  login.verifyLandingPageText()
+})
+Then('user logout from application', async () => {
+  login.clickLogoutLink()
+})

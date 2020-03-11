@@ -4,10 +4,9 @@ Feature: Login
   
   @smoke
   Scenario: Conduit Login
-    Given I open Conduit login page
-    When user type username and password
-        | username  | password  |
-      | Garry123 | Test@123 |
+    Given I open login page
+    When enter user name and password
     And user click on sign in button
-    Then "Welcome to The SSAT" should be shown
+    Then verify correct header text display in landing page
+    Then user logout from application
      
