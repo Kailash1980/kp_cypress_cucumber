@@ -1,9 +1,9 @@
 Feature: Login
 
-  I want to log into Conduit
+I want to log into SSAT Portal
   
   @smoke
-  Scenario: Conduit Login
+  Scenario: SSAT Portal Login
     Given I open login page
     When enter user name and password
     And user click on sign in button
